@@ -1,0 +1,112 @@
+Assignment #1 
+
+#1.
+#2. 
+
+=Welcome Component=
+import React, { Component } from 'react';   
+  
+export default class Welcome extends Component {  
+constructor(props){
+    super(props);
+}
+  render() {  
+  return (  
+  <div>  
+  <h1 style={{color: "Green"}}> Hello World {this.props.name}!</h1> 
+  </div>  
+   );  
+  }  
+} 
+
+
+=APP Component=
+
+import logo from './logo.svg';
+import './App.css';
+import Welcome from './Welcome'
+
+function App() {
+  return (
+    <div>
+    <Welcome name= "JAYSON C" />
+    </div>
+  );
+}
+
+export default App;
+
+#3 
+
+=Add-Two-Numbers Component
+
+import { Component } from "react/cjs/react.development";
+
+export default class AddTwoNumbers extends Component{
+    constructor(props){
+        super(props);
+        this.state = { firstNumber : 5, secondNumber : 8};
+    }
+    render(){
+        return(
+            <div>
+                <p> Adding First and Second Number  = { this.state.firstNumber + this.state.secondNumber }</p>
+            </div>
+        );
+    }
+}
+
+
+#4 
+
+
+----- CARD COMPONENT
+
+import { Component } from "react/cjs/react.development";
+import PropTypes from 'prop-types';
+
+export default class Card extends Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return(
+            <div>
+                <h1> Hi I'm { this.props.firstName + ' ' + this.props.lastName } and I'm { this.props.age } years old. </h1>
+            </div>
+        );
+    }
+}  
+  Card.propTypes = {
+        firstName: PropTypes.string.isRequired,
+        age : PropTypes.number
+    }
+
+
+---- APP COMPONENT
+
+import './App.css';
+import Card from './Card';
+
+function App() {
+  return (
+    <div>
+
+        <Card firstName='JAYSON' lastName = 'COMADRE'  age= '27'/>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+#5 Virtual DOM in ReactJS?
+
+The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation. ... They may also be considered a part of “virtual DOM” implementation in React.
+
+
+ 
+
+ 
